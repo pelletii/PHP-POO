@@ -8,10 +8,7 @@ Voici l'arborescence du dépôt et le rôle des différents composants. Les fich
 |  ├── devcontainer.json # Configuration du Dev Container pour VS Code
 |  └── Dockerfile # Dockerfile pour construire l'image du Dev Container  dans mariadb 
 ├── .github/ # config pour les alertes de dépendances (sécurité)
-├── .vscode/ # config pour XDebug et parametres de vscode
-├── database # scripts pour la BDD
-|  ├── scripts # contient 3 scripts bash : 1 pour initialiser la BDD métier (avec ses utilisateurs système), 1 pour sauver la bdd métier du codespace et 1 pour la recharger à partir du .sql présent dans le dépot
-|  └── sources-sql # fichiers SQL pour contruire la BDD métier, ses utilisateurs et ses données 
+├── .vscode/ 
 ├── site # Dossier racine du serveur web
 ├── start.sh # Script de lancement pour démarrer le service mariadb et les instances web du site et de phpMyAdmin.
 └── stop.sh # Script pour arreter le service mariadb et les instances web du site et de phpMyAdmin.
@@ -45,7 +42,7 @@ Ces droits se divisent en trois :
 Ce dépôt est configuré pour fonctionner avec les Codespaces de GitHub et les Dev Containers de Visual Studio Code. Suivez les étapes ci-dessous pour configurer votre environnement de développement.
 
 !important! 
-Pour être executables, les scripts bash executés dans le codespace (start.sh, stop.sh, initBDD.sh, ...) doivent avoir les bonnes permissions.
+Pour être executables, les scripts bash executés dans le codespace (start.sh, stop.sh, ...) doivent avoir les bonnes permissions.
 
 1. Utilisez la commande ```ls -l``` pour afficher les permissions des fichiers dans le répertoire contenant vos scripts bash.
 Cela affichera les permissions actuelles des fichiers. Les scripts doivent avoir l'autorisation d'exécution (x) pour être exécutables.
@@ -72,5 +69,5 @@ Si les scripts n'ont pas les bonnes permissions, utilisez la commande chmod pour
    Ce script démarre le serveur PHP intégré sur le port 8000, démarre mariadb 
 
 2. **Ouvrir le service php dans un navigateur** :
-   - Accédez à `http://localhost:8000` pour voir la page d'accueil de l'API.
+   - Accédez à `http://localhost:8000/nomScript` pour éxécuter le script souhaité.
 
