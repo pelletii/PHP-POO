@@ -26,7 +26,7 @@ class CompteBancaire {
 
     public function deposer($montant) {
         $this->solde += $montant;
-        echo "Dépôt de $montant €, nouveau solde : $this->solde €<br>";
+        echo "Dépôt de $montant €, nouveau soldes : $this->solde €<br>";
     }
 }
 $monCompte = new CompteBancaire("Alice", 1000);
