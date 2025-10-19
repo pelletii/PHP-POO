@@ -1,4 +1,4 @@
-# PHP et POO
+# PHP et programmation POO
 
 ## UTILISATION DES CONSTRUCTEURS, SETTER ET GETTER
 ### Objectifs
